@@ -9,7 +9,7 @@ const secKey = "shhhh";
 app.use("/uploads", express.static(path.join(__dirname + "uploads")));
 
 const users = [
-  { email: "a@gmail.com", password: "111" },
+  { email: "a@gmail.com", password: "112" },
   { email: "b@gmail.com", password: "222" },
   { email: "c@gmail.com", password: "333" },
   { email: "d@gmail.com", password: "444" },
@@ -28,7 +28,7 @@ app.post("/login", (req, res) => {
   } else {
     const token = jwt.sign({ email: user.email }, secKey);
     return res.send({
-      message: "Login Successfully!",
+      message: "Login Successfully hgya hai!",
       token,
       user,
     });
